@@ -1,0 +1,271 @@
+{
+    "stats":{
+        "str":11,
+        "dex":14,
+        "con":16,
+        "int":13,
+        "wis":8,
+        "cha":16
+    },
+    "otherstats":{
+        "profBonus":3,
+        "proficiencies":[
+            "Wis Saving Throw",
+            "Cha Saving Throw",
+            "Deception",
+            "Intimidation",
+            "Stealth",
+            "Arcana"
+        ],
+        "armorClass":14,
+        "speed":30,
+        "successes":0,
+        "failures":0,
+        "hpMax":56,
+        "hpCurrent":56,
+        "hitDieTotal":5,
+        "hitDie":"d8",
+        "hpTemp":0,
+        "level":"Warlock 6",
+        "name": "Flaca",
+        "background":"Criminal",
+        "alignment":"Chaotic-neutral"
+    },
+    
+    "weapons":[
+        {
+            "name":"Staff Of Force",
+            "attribute":"str",
+            "damageDie":"1d8",
+            "effect":"+2 damage to all force damage, including spells"
+        },
+        {
+            "name":"Poison Dagger",
+            "attribute":"dex",
+            "damageDie":"1d4",
+            "effect":"On hit, target rolls DC14 Con save.  On fail, creature loses reaction and takes 1d6 poison dmg"
+        }
+    ],
+    "spellSlots":[
+        {
+            "type":"Warlock",
+            "level":"3rd",
+            "refresh":"Short rest",
+            "available":true
+        },
+        {
+            "type":"Warlock",
+            "level":"3rd",
+            "refresh":"Short rest",
+            "available":true
+        }
+    ],
+    "spells":
+    [  
+        {  
+           "name":"Create Bonfire",
+           "level":0,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellCreateBonfire.PNG?1528869675412",
+           "conc":true,
+           "effect":"Creates a 5 ft cube bonfire on the ground. It ignites flamable objects that arent being worn or carried.  Creatures in the space make DC14 dex save, take 2d8 fire dmg on fail. Also takes dmg if move through or end turn in fire.",
+           "spellId":"CreateBonfire",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Eldritch Blast",
+           "level":0,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellEldritchBlast.PNG?1528866707292",
+           "conc":false,
+           "effect":"Fires 2 beams of force.  +6 to hit, 2x(1d10+5) force damage. Additional damage from staff of force already added.",
+           "spellId":"EldritchBlast",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Chill Touch",
+           "level":0,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellChillTouch.PNG?1528867012194",
+           "conc":false,
+           "effect":"Conjure a ghostly hand that attacks a creature.  +6 to hit, 2d8 Necrotic damage.",
+           "spellId":"ChillTouch",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Hex",
+           "level":1,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellHex.PNG?1528867381842",
+           "conc":true,
+           "effect":"Place a hex on a creature.  Choose STR, DEX, CON, WIS, INT or CHA, the creature has disadvantage on all related ability checks.  Can chain to another creature as bonus action.  All damage YOU deal to creature does an additional 1d6.",
+           "spellId":"Hex",
+           "show":false,
+           "action":"Bonus action"
+        },
+        {  
+           "name":"Hold Person",
+           "level":2,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellHoldPerson.PNG?1528867643511",
+           "conc":true,
+           "effect":"Target 2 humanoid sized creatures.  If they fail a Wisdom save DC14, they are paralyzed.  They may attempt the save again at the end of each of their turns.",
+           "spellId":"HoldPerson",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Phantasmal Force",
+           "level":2,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellPhantasmalForce.PNG?1528867993034",
+           "conc":true,
+           "effect":"One target creature makes a DC14 Int save.  On fail create 10x10ft illusion in a creatures mind.  Only they can see it.  Illusion can deal 1d6 psychic dmg if it is something that could cause dmg.  Creature may attempt save at end of each of its turn.",
+           "spellId":"PhantasmalForce",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Shatter",
+           "level":2,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellShatter.PNG?1528868421439",
+           "conc":false,
+           "effect":"Creates sudden loud ringing noise at a point.  Creatures within 10ft radius of point make a DC14 con save.  Deals 4d8 damage on failed save, half on success. Inorganic creatures/objects have disadvantage (you can blow nonmagical objects up sometimes).",
+           "spellId":"Shatter",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Hypnotic Pattern",
+           "level":3,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellHypnoticPattern.PNG?1528868890755",
+           "conc":true,
+           "effect":"Creates hpnotic pattern in 30ft cube.  All creatures in cube make DC14 wisdom save, or become charmed.  While charmed, they are incapacitated and have speed 0ft.  They wake if they are shaken or take damage.",
+           "spellId":"HypnoticPattern",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Vampiric touch",
+           "level":3,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellVampiricTouch.PNG?1528869202331",
+           "conc":true,
+           "effect":"Enables you to syphon life with hand.  +6 to hit, 3d6 Necrotic dmg.  You heal half of necrotic dmg dealt.",
+           "spellId":"Vampirictouch",
+           "show":false,
+           "action":"Action"
+        },
+        {  
+           "name":"Thunder Step",
+           "level":3,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellThunderStep.PNG?1528869429549",
+           "conc":true,
+           "effect":"Teleports you, reasonable things you are carrying, and up to 1 other willing creature 5ft away from you up to 90ft.  Creatures within the 10ft of the space you just left make a DC14 con save.  Take 3d10 thunder dmg on fail, half on success.  ",
+           "spellId":"ThunderStep",
+           "show":false,
+           "action":"Action"
+        }
+     ],
+     "feats":[  
+        {  
+           "name":"Fey Presence",
+           "type":"class",
+           "typeDisplay":"Warlock Feat: Archfey Patron",
+           "description":"Starting at 1st level, as an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throw are all charmed or frightened by you (your choice) until the end of your next turn.  Once you use this feature, you cant use it again until you finish a short or long rest."
+        },
+        {  
+           "name":"Misty Escape",
+           "type":"class",
+           "typeDisplay":"Warlock Feat: Archfety Patron",
+           "description":"Starting at 6th level, when you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell. Once you use this feature, you cant use it again until you finish a short or long rest."
+        },
+        {  
+           "name":"Darkvision",
+           "type":"racial",
+           "typeDisplay":"Genasi Feat",
+           "description":"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red."
+        },
+        {  
+           "name":"Fire Resistance",
+           "type":"racial",
+           "typeDisplay":"Genasi Feat",
+           "description":"You have resistance to fire damage."
+        },
+        {  
+           "name":"Reach to the Blaze",
+           "type":"racial",
+           "typeDisplay":"Genasi Feat",
+           "description":"You know the produce flame cantrip. Once you reach 3rd level, you can cast the burning hands spell once with this trait as a 1st-level spell, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells."
+        },
+        {  
+           "name":"Pact of the Chain",
+           "type":"class",
+           "typeDisplay":"Warlock Feat: Pact Boon",
+           "description":"You learn the Find Familiar spell and can cast it as a ritual. The spell doesnt count against your number of spells known. When you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: imp, pseudodragon, quasit or sprite. Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its reaction."
+        },
+        {  
+           "name":"INVOCATION: Agonizing blast",
+           "type":"class",
+           "typeDisplay":"Warlock Invocation",
+           "description":"When you cast eldritch blast, add your Charisma modifier to the damage it deals on a hit."
+        },
+        {  
+           "name":"INVOCATION: Sign of Ill Omen",
+           "type":"class",
+           "typeDisplay":"Warlock Invocation",
+           "description":"You can cast Bestow Curse once using a warlock spell slot. You cant do so again until you finish a long rest."
+        },
+        {  
+           "name":"INVOCATION: Voice of the Chain Master",
+           "type":"class",
+           "typeDisplay":"Warlock Invocation",
+           "description":"You can communicate telepathically with your familiar and perceive through your familiars senses as long as you are on the same plane of existence. Additionally, while perceiving through your familiars senses, you can also speak through your familiar in your own voice, even if your familiar is normally incapable of speech."
+        },
+        {  
+           "name":"Actor",
+           "type":"other",
+           "typeDisplay":"5e PHB Feat",
+           "description":"Skilled at mimicry and dramatics, you gain the following benefits: Increase your Charisma score by 1, to a maximum of 20. You have an advantage on Charisma (Deception) and Charisma (Performance) checks when trying to pass yourself off as a different person. You can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking, or heard the creature make the sound, for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the effect is faked."
+        }
+     ],
+     "featSpells":[  
+        {  
+           "name":"Produce Flame",
+           "level":0,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellProduceFlame.PNG?1528870190336",
+           "conc":false,
+           "effect":"Fire Genasi Feat: Can produce a flame in your hand that does not harm you.  Can attack by hurling the flame as you conjure it or on a later turn as an action.  +6 to hit, 2d8 fire dmg.  ",
+           "spellId":"ProduceFlame",
+           "show":false,
+           "action":"action"
+        },
+        {  
+           "name":"Burning Hands",
+           "level":1,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellBurningHands.PNG?1528870458371",
+           "conc":false,
+           "effect":"Fire Genasi Feat, 1/day w/o using a spell slot: Creates 15ft cone of fire, each creature makes DC14 dex save.  They take 3d6 fire dmg on failed save, half on success.  Lights things on fire that arent worn or carried.",
+           "spellId":"BurningHands",
+           "show":false,
+           "action":"action"
+        },
+        {  
+           "name":"Find Familiar",
+           "level":1,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellFindFamiliar.PNG?1528871116267",
+           "conc":true,
+           "effect":"Archfey Patron Feat: Can cast Find Familiar with a warlock spell slot as a ritual.  Familiar lasts until it dies.  Additional familiar forms include imp, pseudodragon, quasit, sprite.  It cannot attack, but rolls initiative and can perform actions.  ",
+           "spellId":"FindFamiliar",
+           "show":false,
+           "action":"1 hr ritual"
+        },
+        {  
+           "name":"Bestow Curse",
+           "level":3,
+           "link":"https://cdn.glitch.com/c363254b-cab5-4b6d-ba91-38bce46cbbe9%2FspellBestowCurse.PNG?1528870819142",
+           "conc":true,
+           "effect":"Eldritch Invocation Feat: You may cast Bestow curse with a warlock spell slot.  Target creature makes a DC14 wisdom save.  Choose the effect of the curse.  It lasts for 1 min, and can only be removed by a remove curse spell.  ",
+           "spellId":"BestowCurse",
+           "show":false,
+           "action":"action"
+        }
+     ]
+    
+}

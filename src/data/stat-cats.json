@@ -1,0 +1,39 @@
+{
+    "str":[
+        "Str Saving Throw",
+        "Atheletics"
+    ],
+    "dex":[
+        "Dex Saving Throw",
+        "Acrobatics",
+        "Sleight of hand",
+        "Stealth"
+    ],
+    "con":[
+        "Con Saving Throw"
+    ],
+    "int":[
+        "Int Saving Throw",
+        "Arcana",
+        "History",
+        "Investigation",
+        "Nature",
+        "Religion"
+    ],
+    "wis":[
+        "Wis Saving Throw",
+        "Animal Handling",
+        "Insight",
+        "Medicine",
+        "Perception",
+        "Survival"
+    ],
+    "cha":[
+        "Cha Saving Throw",
+        "Deception",
+        "Intimidation",
+        "Performance",
+        "Persuasion"
+    ]
+    
+}

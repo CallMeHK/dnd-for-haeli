@@ -1,0 +1,2 @@
+export const EDIT_ELEMENT = 'EDIT_ELEMENT';
+export const CHANGE_FILTER = 'CHANGE_FILTER';
