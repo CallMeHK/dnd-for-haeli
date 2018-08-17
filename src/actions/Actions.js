@@ -1,11 +1,12 @@
-import { EDIT_ELEMENT, CHANGE_FILTER } from './types';
+import { EDIT_ELEMENT, CHANGE_FILTER, IMAGE_ANIMATION } from './types';
 
-export const editElement = (elt,val) => dispatch => {
+export const editElement = (elt,val,type) => dispatch => {
     dispatch({
         type: EDIT_ELEMENT,
         payload: {
             element: elt,
-            value:val
+            value:val,
+            type:type
         }
     })
 
@@ -14,6 +15,13 @@ export const editElement = (elt,val) => dispatch => {
 export const changeFilter = (val) => dispatch => {
     dispatch({
         type: CHANGE_FILTER,
+        payload: val
+    })
+}
+
+export const changeImage = (val) => dispatch => {
+    dispatch({
+        type: IMAGE_ANIMATION,
         payload: val
     })
 }

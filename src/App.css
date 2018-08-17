@@ -87,7 +87,295 @@ a, .number {
   font-weight: 600;
   color:rgb(151, 187, 224);
   box-shadow: 3px 4px 2px 0px black;
+  cursor: pointer;
 }
+.header {
+  display:flex;
+  justify-content: center;
+
+}
+.hpBarContainer {
+  width:80vw;
+  height:30px;
+  background:rgb(31, 56, 80);
+  border-radius: 6px;
+  box-shadow: 2px 3px 2px black;
+  margin:6px;
+  display:flex;
+  justify-content: flex-end;
+  padding:3px;
+  align-items: center;
+  cursor: pointer;
+}
+.hpBar {
+  height:30px;
+  background:green;
+  border-radius: 6px;
+  display:flex;
+  justify-content: flex-end;
+  color:black;
+  font-weight: 550;
+  transition: width 1s;
+  border:black;
+  border-style:solid;
+  border-width:1px;
+}
+.hpButtonContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background:rgb(31, 56, 80);
+  margin:8px;
+  padding:6px 8vw 10px 8vw;
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px black;
+  
+
+}
+.hpButton {
+  height:30px;
+  width:90px;
+  background:rgb(31, 56, 80);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  font-weight: 600;
+  color:rgb(151, 187, 224);
+  box-shadow: 1px 1px 2px 1px black;
+    margin:5px;
+  cursor: pointer;
+}
+
+.characterComponent {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displayStatContainer {
+  height:50px;
+  width:80px;
+  margin:10px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px black;
+  padding-top:5px;
+}
+
+
+
+.displayStatBlock{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.displayImageContainer{
+  width:95vw;
+  height:70px;
+  background-position: top;
+  background-size: cover;
+  background-image: url('https://i.imgur.com/DRbKUiA.jpg');
+}
+
+.spellSlots{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.spellSlotComponent{
+  height:60px;
+  width:40vw;
+  margin:15px;
+  background:rgb(31, 56, 80);
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px black;
+  display:flex;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.spellSlotType{
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  padding-top:4px;
+  padding-left:5px;
+  z-index:3;
+}
+.spellSlotLevel{
+  font-size:50px;
+  font-weight: 550;
+  z-index:3;
+}
+
+.spellBar {
+  background:rgb(43, 85, 125);
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  z-index:2;
+  border-radius: 10px;
+}
+
+.spellAvailable{
+  animation-name: spellAvailable;
+  animation-duration: 0.5s;
+}
+
+.spellUnavailable{
+  animation-name: spellUnavailable;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+.shake{
+  animation-name: shake;
+  animation-duration: 0.3s;
+}
+
+.spell{
+  animation-name: spell;
+  animation-duration: 1.4s;
+  position:relative;
+}
+
+.spell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  animation-name: spellAfter;
+  animation-duration: 1.4s;
+}
+
+.heal {
+  position:relative;
+}
+.heal::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  animation-name: heal;
+  animation-duration: 1s;
+}
+
+.reset {
+  position:relative;
+}
+.reset::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  animation-name: reset;
+  animation-duration: 2s;
+}
+
+@keyframes spell {
+  /* 0%{} */
+  50%{    
+    background-image:url('https://i.imgur.com/aw9ik3g.jpg')
+
+  }
+  100%{  
+    background-image: url('https://i.imgur.com/DRbKUiA.jpg');
+
+  }
+}
+
+@keyframes spellUnavailable {
+  /* 0%{} */
+  20%{    
+    background-image:url('https://i.imgur.com/GEo54kI.png');
+
+  }
+  /* 30%{
+    height: calc(100% - 6px);
+    
+  } */
+  70%{  
+    transform: translateY(60px);
+  }
+  100%{
+    transform: translateY(65px);
+    visibility: hidden;
+  }
+}
+
+@keyframes spellAfter {
+  /* 0%{} */
+  50%{
+    background-color: rgba(173, 17, 17, 0.3);  
+  }
+  100%{  
+    background-color: rgba(0, 0, 0, 0);    
+  }
+}
+
+@keyframes heal {
+  /* 0%{} */
+  50%{
+    background-color: rgba(25, 219, 112, 0.568);  
+  }
+  100%{  
+    background-color: rgba(173, 17, 17, 0);    
+  }
+}
+
+@keyframes reset {
+  /* 0%{} */
+  20%{
+    background-color: rgba(25, 219, 112, 0.568);  
+  }
+  40%{
+    background-color: rgba(25, 219, 112, 0.2);  
+  }
+  60%{
+    background-color: rgba(25, 219, 112, 0.568);  
+  }
+  80%{
+    background-color: rgba(25, 219, 112, 0.2);  
+  }
+  95%{  
+    background-color: rgba(25, 219, 112, 0.568);  
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 @media only screen and (min-width: 500px) {
   .mainComponent {
   flex-direction: row;
